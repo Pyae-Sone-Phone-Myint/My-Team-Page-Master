@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --primary: rgba(0, 0, 0, 1);
+  --footer: rgba(169, 169, 169, 1);
+  --header: "PT Serif", serif;
+  --text: "Poppins", sans-serif;
+  --footer-text: "Montserrat", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  margin-inline: 100px;
+  margin-block-start: 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header title {
+  font-family: var(--header);
+  font-size: 36px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.text-header {
+  font-family: var(--text);
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.text-content {
+  font-family: var(--text);
+  font-weight: 400;
+  color: var(--primary);
+  font-size: 18px;
+}
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  row-gap: 100px;
+  column-gap: 40px;
+  margin-bottom: 100px;
+}
+
+.members-box {
+    flex : 25%
+}
+
+.members-box:nth-child(3n + 2) {
+  position: relative;
+  top: 80px;
+}
+
+.member {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+/* .member-img {
+  max-width: 300px;
+} */
+
+.job {
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--text);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.name {
+  text-transform: capitalize;
+  font-family: var(--text);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  padding-block: 50px;
+}
+
+footer p {
+  font-family: var(--footer-text);
+  color: var(--footer);
+  font-size: 17px;
+}
+
+
+
+@media (max-width: 890px) {
+  .container {
+    margin-top: 20px;
+    margin-inline: 50px;
+  }
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  .text-content {
+    font-size: 14px;
+  }
+
+  .members {
+    row-gap: 50px;
+    margin-bottom: 80px;
+    column-gap: 20px;
+  }
+
+  .members-box {
+    flex: 40%;
+  }
+
+  .members-box:nth-child(3n + 2) {
+    top: 0px;
+  }
+
+  .members-box:nth-child(even) {
+    position: relative;
+    top: 80px;
+  }
+
+  .member {
+    gap: 0;
+  }
+
+  .member-img {
+    /* width: 100%; */
+  }
+
+  footer p{
+    font-size: 14px;
+  }
+}
+
+@media (max-width : 620px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .job {
+        font-size: 10px;
+      }
+    
+      .name {
+        font-size: 14px;
+      }
+}
